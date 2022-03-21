@@ -33,3 +33,46 @@ echo
 
   1 passing (612ms)
 ```
+
+
+编写scripts底下的文件然后运行
+`npx hardhat run scripts/deploy-hello.ts --network localhost`
+
+但是本地没有启动一个服务，所以运行
+`npx hardhat node`
+
+再执行 run scripts 命令
+echo:
+```shell
+say hello:  Hello World
+```
+
+并且此时在 node 端 有了许多信息，如下：
+```shell
+eb3_clientVersion (2)
+eth_chainId
+eth_accounts
+eth_blockNumber
+eth_chainId (2)
+eth_estimateGas
+eth_getBlockByNumber
+eth_feeHistory
+eth_sendTransaction
+  Contract deployment: HelloWorld
+  Contract address:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+  Transaction:         0x6e9a78dc5d4821a76620ac5ad5be49a6e8c5c4b844a4c8fef3c1504b0cff7c9c
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  Value:               0 ETH
+  Gas used:            135055 of 135055
+  Block #1:            0x298eae047263025267c4f152f010ce3bd70514adb97480b849a67fb8353a2b7c
+
+eth_chainId
+eth_getTransactionByHash
+eth_chainId
+eth_getTransactionReceipt
+eth_chainId
+eth_call
+  Contract call:       HelloWorld#hello
+  From:                0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  To:                  0x5fbdb2315678afecb367f032d93f642f64180aa3
+```
