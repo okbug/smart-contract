@@ -80,3 +80,12 @@ eth_call
 
 // TODO:
 发现只有先在本地run了hardhat run scripts之后才可以连通web端
+
+
+安装Chrome插件：MetaMask并且注册账号，将本地的某个Private Key登录进去，例如 **aa3**。
+
+安装webpack
+`yarn add -D webpack webpack-cli ts-loader html-webpack-plugin dotenv`
+添加配置，如webpack.config.js所示。(以及tsconfig配置)
+添加src文件夹并且添加html和ts入口文件，在index.ts中编写连接以太坊的代码
+并且远程调用(RPC) hello.hello 方法 展示在页面中。
